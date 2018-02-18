@@ -1,0 +1,41 @@
+{
+    "name": "jsonlinter",
+    "displayName": "jsonlinter",
+    "description": "A JSON Linter",
+    "version": "0.0.1",
+    "publisher": "todo-publisher-name",
+    "engines": {
+        "vscode": "^1.20.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.jsonLinter"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.jsonLinter",
+                "title": "JSON Lint"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "dependencies": {
+        "jsonlint-mod": "^1.7.2",
+        "vsce": "^1.36.2",
+        "vso-node-api": "^6.3.2"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "eslint": "^4.11.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6"
+    }
+}
